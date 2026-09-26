@@ -1,23 +1,75 @@
 aid: atmobiosciences
+
 name: Atmobiosciences
-description: 'Atmobiosciences is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Atmobiosciences (Atmo Biosciences) develops ingestible gas‑sensing capsules that measure gastrointestinal gases in real time. The
+  Atmo Gas Capsule System provides clinicians with direct, localized data on gas production throughout the GI tract, enabling improved diagnosis
+  and monitoring of motility disorders. The company’s platform integrates hardware, software, and data analytics to deliver actionable insights
+  for research and clinical care.
+
 url: https://raw.githubusercontent.com/api-evangelist/atmobiosciences/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Bioscience
+- Medical Devices
+- Gastroenterology
+- Diagnostics
+- Data Analytics
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/atmobiosciences-hosts.yml
+- type: TermsOfService
+  url: https://www.atmobiosciences.com/terms-and-conditions-clinical-research/
+- type: PrivacyPolicy
+  url: https://www.atmobiosciences.com/privacy/
+- type: Newsroom
+  url: https://www.atmobiosciences.com/news/
+- type: Leadership
+  url: https://www.atmobiosciences.com/team/
+- type: DomainSecurity
+  url: security/atmobiosciences-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/atmobiosciences
+  url: https://www.atmobiosciences.com
+
+apis:
+- name: Atmobiosciences API
+  description: API for Atmobiosciences (no public contract discovered)
+  humanURL: https://www.atmobiosciences.com
+  baseURL: null
+  aid: atmobiosciences:atmobiosciences-api
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, gRPC or WSDL contract found at the API host (api.atmobiosciences.com)
+  evidence:
+  - url: https://api.atmobiosciences.com/openapi.json
+    status: failed
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
